@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Fill Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Miguel Ángel Aguilar García">
+    <script src="app.js" defer></script>
+
+</head>
+<body>
+    <header>Box Fill Calculator</header>
+    <div class="box-decimals" id="form0">
+        <label for="decimals">Decimals (in results): </label>
+        <input type="number" min="1" max="2" step="1" value="2" name="decimals" id="decimals" class="data">
+    </div>
+
+    <div class="box-container">
+        <form id="form">
+            <div class="box-data-AWG">
+                <span></span>
+                <span></span>
+                <span class="label-center">AWG</span>
+            </div>
+            <div class="box-data">
+                <span class="label">Items Contained Within Box</span>
+                <span class="label-center">#</span>
+                <span class="label-center">18</span>
+                <span class="label-center">16</span>
+                <span class="label-center">14</span>
+                <span class="label-center">12</span>
+                <span class="label-center">10</span>
+                <span class="label-center">8</span>
+                <span class="label-center">6</span>
+            </div>
+            <div class="box-data">
+                <span class="label">Conductors that originate outside box</span>
+                <span class="label-center">1</span>
+                <input type="number" min="0" value="0" step="1" name="item1AWG18" id="item1AWG18" class="data">
+                <input type="number" min="0" value="0" step="1" name="item1AWG16" id="item1AWG16" class="data">
+                <input type="number" min="0" value="0" step="1" name="item1AWG14" id="item1AWG14" class="data">
+                <input type="number" min="0" value="0" step="1" name="item1AWG12" id="item1AWG12" class="data">
+                <input type="number" min="0" value="0" step="1" name="item1AWG10" id="item1AWG10" class="data">
+                <input type="number" min="0" value="0" step="1" name="item1AWG8" id="item1AWG8" class="data">
+                <input type="number" min="0" value="0" step="1" name="item1AWG6" id="item1AWG6" class="data">
+            </div>
+            <div class="box-data">
+                <span class="label">Conductors that pass through box without splice or connection (less than 12 in. in total length)</span>
+                <span class="label-center">1</span>
+                <input type="number" min="0" value="0" step="1" name="item2AWG18" id="item2AWG18" class="data">
+                <input type="number" min="0" value="0" step="1" name="item2AWG16" id="item2AWG16" class="data">
+                <input type="number" min="0" value="0" step="1" name="item2AWG14" id="item2AWG14" class="data">
+                <input type="number" min="0" value="0" step="1" name="item2AWG12" id="item2AWG12" class="data">
+                <input type="number" min="0" value="0" step="1" name="item2AWG10" id="item2AWG10" class="data">
+                <input type="number" min="0" value="0" step="1" name="item2AWG8" id="item2AWG8" class="data">
+                <input type="number" min="0" value="0" step="1" name="item2AWG6" id="item2AWG6" class="data">
+            </div>
+            <div class="box-data">
+                <span class="label">Conductors 12 in. or greater that are looped (or coiled) and unbroken (see 300.14 for exact measurement)</span>
+                <span class="label-center">2</span>
+                <input type="number" min="0" value="0" step="2" name="item3AWG18" id="item3AWG18" class="data">
+                <input type="number" min="0" value="0" step="2" name="item3AWG16" id="item3AWG16" class="data">
+                <input type="number" min="0" value="0" step="2" name="item3AWG14" id="item3AWG14" class="data">
+                <input type="number" min="0" value="0" step="2" name="item3AWG12" id="item3AWG12" class="data">
+                <input type="number" min="0" value="0" step="2" name="item3AWG10" id="item3AWG10" class="data">
+                <input type="number" min="0" value="0" step="2" name="item3AWG8" id="item3AWG8" class="data">
+                <input type="number" min="0" value="0" step="2" name="item3AWG6" id="item3AWG6" class="data">
+            </div>
+            <div class="box-data">
+                <span class="label">Support fittings (such as luminaire studs or hickeys)</span>
+                <span class="label-center">1</span>
+                <input type="number" min="0" value="0" step="1" name="item4AWG18" id="item4AWG18" class="data">
+                <input type="number" min="0" value="0" step="1" name="item4AWG16" id="item4AWG16" class="data">
+                <input type="number" min="0" value="0" step="1" name="item4AWG14" id="item4AWG14" class="data">
+                <input type="number" min="0" value="0" step="1" name="item4AWG12" id="item4AWG12" class="data">
+                <input type="number" min="0" value="0" step="1" name="item4AWG10" id="item4AWG10" class="data">
+                <input type="number" min="0" value="0" step="1" name="item4AWG8" id="item4AWG8" class="data">
+                <input type="number" min="0" value="0" step="1" name="item4AWG6" id="item4AWG6" class="data">
+            </div>
+            <div class="box-data-checkbox">
+                <span class="label">Internal cable clamps (one or more)</span>
+                <input type="checkbox" name="clamp" id="clamp" class="label-center" checked>
+                <span class="label-center" style="padding-left: 2px;">1 only</span>
+                <input type="number" min="0" value="0" step="1" name="item5AWG18" id="item5AWG18" class="result" disabled>
+                <input type="number" min="0" value="0" step="1" name="item5AWG16" id="item5AWG16" class="result" disabled>
+                <input type="number" min="0" value="0" step="1" name="item5AWG14" id="item5AWG14" class="result" disabled>
+                <input type="number" min="0" value="0" step="1" name="item5AWG12" id="item5AWG12" class="result" disabled>
+                <input type="number" min="0" value="0" step="1" name="item5AWG10" id="item5AWG10" class="result" disabled>
+                <input type="number" min="0" value="0" step="1" name="item5AWG8" id="item5AWG8" class="result" disabled>
+                <input type="number" min="0" value="0" step="1" name="item5AWG6" id="item5AWG6" class="result" disabled>
+            </div>
+            <div class="box-data-checkbox">
+                <span class="label">Equipment grounding conductor (one or more)</span>
+                <input type="checkbox" name="egc" id="egc" class="label-center" checked>
+                <span class="label-center" style="padding-left: 2px;">1 only</span>
+                <input type="number" min="0" value="0" step="1" name="item6AWG18" id="item6AWG18" class="result" disabled>
+                <input type="number" min="0" value="0" step="1" name="item6AWG16" id="item6AWG16" class="result" disabled>
+                <input type="number" min="0" value="0" step="1" name="item6AWG14" id="item6AWG14" class="result" disabled>
+                <input type="number" min="0" value="0" step="1" name="item6AWG12" id="item6AWG12" class="result" disabled>
+                <input type="number" min="0" value="0" step="1" name="item6AWG10" id="item6AWG10" class="result" disabled>
+                <input type="number" min="0" value="0" step="1" name="item6AWG8" id="item6AWG8" class="result" disabled>
+                <input type="number" min="0" value="0" step="1" name="item6AWG6" id="item6AWG6" class="result" disabled>
+            </div>
+            <div class="box-data-checkbox">
+                <span class="label">Isolated equipment grounding conductor (one or more) [see 250.146(D)]</span>
+                <input type="checkbox" name="iegc" id="iegc" class="label-center" checked>
+                <span class="label-center" style="padding-left: 2px;">1 only</span>
+                <input type="number" min="0" value="0" step="1" name="item7AWG18" id="item7AWG18" class="result" disabled>
+                <input type="number" min="0" value="0" step="1" name="item7AWG16" id="item7AWG16" class="result" disabled>
+                <input type="number" min="0" value="0" step="1" name="item7AWG14" id="item7AWG14" class="result" disabled>
+                <input type="number" min="0" value="0" step="1" name="item7AWG12" id="item7AWG12" class="result" disabled>
+                <input type="number" min="0" value="0" step="1" name="item7AWG10" id="item7AWG10" class="result" disabled>
+                <input type="number" min="0" value="0" step="1" name="item7AWG8" id="item7AWG8" class="result" disabled>
+                <input type="number" min="0" value="0" step="1" name="item7AWG6" id="item7AWG6" class="result" disabled>
+            </div>
+            <div class="box-data">
+                <span class="label">Conductors that originate within box and do not leave box</span>
+                <span class="label-center">0</span>
+                <input type="number" min="0" value="0" step="0" name="item8AWG18" id="item8AWG18" class="data-fake" disabled>
+                <input type="number" min="0" value="0" step="0" name="item8AWG16" id="item8AWG16" class="data-fake" disabled>
+                <input type="number" min="0" value="0" step="0" name="item8AWG14" id="item8AWG14" class="data-fake" disabled>
+                <input type="number" min="0" value="0" step="0" name="item8AWG12" id="item8AWG12" class="data-fake" disabled>
+                <input type="number" min="0" value="0" step="0" name="item8AWG10" id="item8AWG10" class="data-fake" disabled>
+                <input type="number" min="0" value="0" step="0" name="item8AWG8" id="item8AWG8" class="data-fake" disabled>
+                <input type="number" min="0" value="0" step="0" name="item8AWG6" id="item8AWG6" class="data-fake" disabled>
+            </div>
+            <div class="box-data">
+                <span class="label">Fixture wires [per 314.16(B)(1), Exception]</span>
+                <span class="label-center">0</span>
+                <input type="number" min="0" value="0" step="0" name="item9AWG18" id="item9AWG18" class="data-fake" disabled>
+                <input type="number" min="0" value="0" step="0" name="item9AWG16" id="item9AWG16" class="data-fake" disabled>
+                <input type="number" min="0" value="0" step="0" name="item9AWG14" id="item9AWG14" class="data-fake" disabled>
+                <input type="number" min="0" value="0" step="0" name="item9AWG12" id="item9AWG12" class="data-fake" disabled>
+                <input type="number" min="0" value="0" step="0" name="item9AWG10" id="item9AWG10" class="data-fake" disabled>
+                <input type="number" min="0" value="0" step="0" name="item9AWG8" id="item9AWG8" class="data-fake" disabled>
+                <input type="number" min="0" value="0" step="0" name="item9AWG6" id="item9AWG6" class="data-fake" disabled>
+            </div>
+            <div class="box-data">
+                <span class="label">Devices (such as receptacles, switches) or utilization equipment (such as timers, dimmers, AFCI receptacles, GFCI receptacles, TVSS receptacles)</span>
+                <span class="label-center">2</span>
+                <input type="number" min="0" value="0" step="2" name="itemDeviceAWG18" id="itemDeviceAWG18" class="data">
+                <input type="number" min="0" value="0" step="2" name="itemDeviceAWG16" id="itemDeviceAWG16" class="data">
+                <input type="number" min="0" value="0" step="2" name="itemDeviceAWG14" id="itemDeviceAWG14" class="data">
+                <input type="number" min="0" value="0" step="2" name="itemDeviceAWG12" id="itemDeviceAWG12" class="data">
+                <input type="number" min="0" value="0" step="2" name="itemDeviceAWG10" id="itemDeviceAWG10" class="data">
+                <input type="number" min="0" value="0" step="2" name="itemDeviceAWG8" id="itemDeviceAWG8" class="data">
+                <input type="number" min="0" value="0" step="2" name="itemDeviceAWG6" id="itemDeviceAWG6" class="data">
+            </div>
+
+            <br>
+
+            <div class="box-data">
+                <span class="label">Number of conductors</span>
+                <span class="label-center">#</span>
+                <span id="numAWG18" class="result"></span>
+                <span id="numAWG16" class="result"></span>
+                <span id="numAWG14" class="result"></span>
+                <span id="numAWG12" class="result"></span>
+                <span id="numAWG10" class="result"></span>
+                <span id="numAWG8" class="result"></span>
+                <span id="numAWG6" class="result"></span>
+            </div>
+            <div class="box-data">
+                <span class="label">Free Space Within Box for Each Conductor</span>
+                <span class="label-center">in<sup>3</sup></span>
+                <span class="label-center" id="inAWG18">1.50</span>
+                <span class="label-center" id="inAWG16">1.75</span>
+                <span class="label-center" id="inAWG14">2.00</span>
+                <span class="label-center" id="inAWG12">2.25</span>
+                <span class="label-center" id="inAWG10">2.50</span>
+                <span class="label-center" id="inAWG8">3.00</span>
+                <span class="label-center" id="inAWG6">5.00</span>
+            </div>
+            <div class="box-data">
+                <span class="label">Free Space Within Box for Each Conductor</span>
+                <span class="label-center">cm<sup>3</sup></span>
+                <span class="label-center" id="cmAWG18">24.6</span>
+                <span class="label-center" id="cmAWG16">28.7</span>
+                <span class="label-center" id="cmAWG14">32.8</span>
+                <span class="label-center" id="cmAWG12">36.9</span>
+                <span class="label-center" id="cmAWG10">41.0</span>
+                <span class="label-center" id="cmAWG8">49.2</span>
+                <span class="label-center" id="cmAWG6">81.9</span>
+            </div>
+            <div class="box-data">
+                <span class="label">Free Space Within Box for Each AWG</span>
+                <span class="label-center">in<sup>3</sup></span>
+                <span id="inAWG18Total" class="result-small"></span>
+                <span id="inAWG16Total" class="result-small"></span>
+                <span id="inAWG14Total" class="result-small"></span>
+                <span id="inAWG12Total" class="result-small"></span>
+                <span id="inAWG10Total" class="result-small"></span>
+                <span id="inAWG8Total" class="result-small"></span>
+                <span id="inAWG6Total" class="result-small"></span>
+            </div>
+            <div class="box-data">
+                <span class="label">Free Space Within Box for Each AWG</span>
+                <span class="label-center">cm<sup>3</sup></span>
+                <span id="cmAWG18Total" class="result-small"></span>
+                <span id="cmAWG16Total" class="result-small"></span>
+                <span id="cmAWG14Total" class="result-small"></span>
+                <span id="cmAWG12Total" class="result-small"></span>
+                <span id="cmAWG10Total" class="result-small"></span>
+                <span id="cmAWG8Total" class="result-small"></span>
+                <span id="cmAWG6Total" class="result-small"></span>
+            </div>
+            <div class="box-result-volume">
+                <span class="label">Free Space Within Box</span>
+                <span class="label-center">in<sup>3</sup></span>
+                <span id="inResult" class="result"></span>
+            </div>
+            <div class="box-result-volume">
+                <span class="label">Free Space Within Box</span>
+                <span class="label-center">cm<sup>3</sup></span>
+                <span id="cmResult" class="result"></span>
+            </div>
+        </form>  
+    </div>
+
+<br>
+
+<div class="box-wrap">
+    <ul class="nota">
+        <li class="nota_sinBullets">Bibliografía</li>
+        <ul>
+            <li><a href="https://miguelangelaguilargarcia.blogspot.com/2019/06/nec-handbook-2017.html" target="_blank">NEC Handbook 2017</a></li>
+        </ul>
+        <ul>
+            <li><a href="https://miguelangelaguilargarcia.blogspot.com/2020/11/illustrated-guide-to-national.html" target="_blank">Illustrated Guide to the National Electrical Code. Based on the 2014 National Electrical Code. 6ed</a></li>
+        </ul>
+    </ul>
+</div>
+
+</body>
+
+<footer>
+    <p class="text-center-footer"><a href="https://github.com/MiguelAAguilarG" target="_blank">Código</a></p>
+    <p id="Miblog"><a href="https://miguelangelaguilargarcia.blogspot.com/2020/04/herramientas-para-calculos-electricos.html" target="_blank">Más herramientas (cálculos eléctricos)</a></p>
+    <p id="autor" > By Miguel Ángel Aguilar García</p>
+</footer>
+</html>
+
+
+
